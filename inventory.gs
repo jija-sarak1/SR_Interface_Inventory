@@ -42,8 +42,14 @@ function inventory() {
         }
       }
     };
-    // for(let k = 0; k < test_data.length; k++){
-    // }
+    for(let k = 0; k < test_data.length; k++){
+      if(test_data[k][1] == enrolled_student[i][0]){
+        if(record[4] == "Resale"){
+          record[4] = "Assessment Test"
+        }
+        record[5] = test_data[k][6]
+      }
+    }
 
     for (let l = 0; l < resale.length; l++){
       if(record[4] == "Resale" && resale[l][2] == enrolled_student[i][0]){
